@@ -33,7 +33,6 @@ public class TermCounter {
 	public TermCounter(String label) {
 		this.label = label;
 		this.map = new HashMap<String, Integer>();
-		fileCount = 0;
 	}
 	
 	public String getLabel() {
@@ -179,8 +178,10 @@ public class TermCounter {
 	 */
 	public static void main(String[] args) throws IOException {
 		
+		fileCount = 0;
+		
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
-		System.out.println("Enter the name of a file with URLs: ");
+		System.out.print("Enter the name of a file with URLs: ");
 		String filename = reader.nextLine(); // Scans the next token of the input as an int.
 		
 		reader.close();

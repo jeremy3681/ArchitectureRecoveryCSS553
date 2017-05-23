@@ -30,11 +30,13 @@ public class WikiFetcher {
 		Document doc = conn.get();
 
 		// select the content text and pull out the paragraphs.
-		Element content = doc.getElementsByClass("section").first();
+//		Element content = doc.getElementsByClass("section").first();
 
 		// TODO: avoid selecting paragraphs from sidebars and boxouts
-		Elements paras = content.select("p");
-		return paras;
+//		Elements paras = content.select("p");
+//		return paras;
+		doc.getElementsByTag("body");
+		return doc.getAllElements();
 	}
 
 	/**
