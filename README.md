@@ -3,20 +3,25 @@ Program to recover architecture from prescriptive and descriptive information.
 Currently implemented two components: wed crawler and topic modeling component.
 
 ### Set-up
-Prerequisites: installed Java 1.8 and Maven
+__Prerequisites__: installed Java 1.8 and Maven
 
 Before running the program for the first time:
 * Open the project folder in the terminal and call:
- `chmod +x setup.sh`
- `./setup.sh`
+
+   `chmod +x setup.sh`
+ 
+   `./setup.sh`
+ 
 This will download all the dependencies (tools and libaries) and build the project .jar file.
 
 ### Running
 
 1. Open the "urls.txt" file and insert URLs of the pages with relevant project documentation to be processed by the architecture recovery tool. There should be 1 URL per line, with each followed by a newline character. Save and close the file.
 2. Open the main project folder in the terminal and type the following commands:
-`chmod +x arch_recovery.sh`
-`./arch_recovery.sh`
+
+   `chmod +x arch_recovery.sh`
+   
+   `./arch_recovery.sh`
 3. After tools execution is complete retrieve the results in the "arch_keys.txt" file.
 
 ### Other 
@@ -36,9 +41,12 @@ To run the .jar files created in the project. Use the following command in your 
     
 This will run the file as if you executed it in an IDE.
 
-## Topic modeling using MALLET
+#### Topic modeling using MALLET
 
 Mallet is a command-line tool. It is called using the following commands:
-`./mallet-2.0.8/bin/mallet import-dir --input ./Crawler/output --keep-sequence --remove-stopwords --output arch.mallet`
-`./mallet-2.0.8/bin/mallet train-topics --input arch.mallet --num-topics 5 --optimize-interval 5 --output-state topic-state.gz  --output-topic-keys arch_keys.txt --output-doc-topics arch_composition.txt`
+
+    ./mallet-2.0.8/bin/mallet import-dir --input ./Crawler/output --keep-sequence --remove-stopwords --output arch.mallet
+
+    ./mallet-2.0.8/bin/mallet train-topics --input arch.mallet --num-topics 5 --optimize-interval 5 --output-state topic-state.gz  --output-topic-keys arch_keys.txt --output-doc-topics arch_composition.txt 
+
 The results are thus saved in the "arch_keys.txt" file.
