@@ -17,3 +17,10 @@ local.properties
 *.launch
 
 RemoteSystemsTempFiles
+
+Crawler2/output/
+arch.mallet
+arch_composition.txt
+arch_keys.txt
+target/
+topic-state.gz

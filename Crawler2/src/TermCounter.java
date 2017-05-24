@@ -204,7 +204,7 @@ public class TermCounter {
 				WikiFetcher wf = new WikiFetcher();
 				Elements paragraphs = wf.fetchWikipedia(url);
 				
-				File file = new File("datafile" + fileCount + ".txt");
+				File file = new File("output/datafile" + fileCount + ".txt");
 				
 				if(file.exists()) {
 					file.delete();
