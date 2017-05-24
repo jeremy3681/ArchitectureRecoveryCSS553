@@ -1,26 +1,7 @@
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
-
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-RemoteSystemsTempFiles
-
-Crawler2/output/
+Crawler/dependencies
+Crawler/output
+Crawler/target
 arch.mallet
 arch_composition.txt
 arch_keys.txt
-target/
 topic-state.gz
