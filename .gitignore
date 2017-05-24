@@ -1,5 +1,5 @@
 Crawler/dependencies
-Crawler/output
+Crawler/output/*.txt
 Crawler/target
 arch.mallet
 arch_composition.txt
