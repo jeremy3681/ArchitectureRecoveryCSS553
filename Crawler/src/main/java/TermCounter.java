@@ -211,8 +211,12 @@ public class TermCounter {
 					file.delete();
 				}
 				
+				System.out.println("The url " + url + " is currently being parsed.");
+				
 				TermCounter counter = new TermCounter(url);
 				counter.processElements(paragraphs);
+				
+				System.out.println("The page " + url + "has been parsed and is in file " + file.getName());
 				
 				fileCount++;
 			}
